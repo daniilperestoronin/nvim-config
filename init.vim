@@ -17,6 +17,8 @@ Plug 'arcticicestudio/nord-vim'
 " GO
 Plug 'fatih/vim-go', { 'tag': '*' } 
 Plug 'nsf/gocode', { 'tag': 'v.20150303', 'rtp': 'vim' } 
+" Vue
+Plug 'posva/vim-vue'
 
 " Initialize plugin system 
 call plug#end() 

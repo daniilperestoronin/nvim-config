@@ -31,5 +31,5 @@ set incsearch
 syntax on 
 
 " Key mappings 
-map<C-n> :NERDTreeToggle<CR>
+map<C-e> :NERDTreeToggle<CR>
 

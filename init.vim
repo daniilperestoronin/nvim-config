@@ -28,6 +28,8 @@ call plug#end()
 " Settings
 colorscheme OceanicNext
 
+set colorcolumn=80
+
 set nowrap
 set number
 set hlsearch

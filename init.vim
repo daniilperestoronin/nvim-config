@@ -16,7 +16,7 @@ Plug 'ayu-theme/ayu-vim'
 Plug 'mhartington/oceanic-next'
 
 " Language support
-" GO
+" GO 
 Plug 'fatih/vim-go', { 'tag': '*' }
 Plug 'nsf/gocode', { 'tag': 'v.20150303', 'rtp': 'vim' }
 " Vue
@@ -35,9 +35,11 @@ set number
 set hlsearch
 set incsearch
 syntax on
+ 
+"tab display only file name
+let g:airline#extensions#tabline#fnamemod = ':t'
 
 " Key mappings
 map<C-e> :NERDTreeToggle<CR>
-
 
 

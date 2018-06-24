@@ -7,9 +7,8 @@ call plug#begin('~/.local/share/nvim/plugged')
 " nerdtree
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 " vim-airline
-Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline'    
 Plug 'vim-airline/vim-airline-themes'
-Plug 'Yggdroot/indentLine'
 
 "Colorschemes
 Plug 'arcticicestudio/nord-vim'
@@ -35,24 +34,23 @@ set nowrap
 set number
 set hlsearch
 set incsearch
-set list lcs=space:·
+
 filetype plugin indent on
-" show existing tab with 4 spaces width
 set tabstop=4
-" when indenting with '>', use 4 spaces width
 set shiftwidth=4
-" On pressing tab, insert 4 spaces
 set expandtab
+set listchars=eol:¬,tab:··,space:·
+set list
 
 syntax on
 
 "tab display only file name
 let g:airline#extensions#tabline#fnamemod = ':t'
 
-let g:indentLine_char = '·'
-
 " Key mappings
 map<C-e> :NERDTreeToggle<CR>
+
+
 
 
 

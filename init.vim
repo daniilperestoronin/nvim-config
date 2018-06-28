@@ -7,8 +7,9 @@ call plug#begin('~/.local/share/nvim/plugged')
 " nerdtree
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 " vim-airline
-Plug 'vim-airline/vim-airline'    
+Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'dkprice/vim-easygrep'
 
 "Colorschemes
 Plug 'arcticicestudio/nord-vim'
@@ -49,6 +50,7 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 
 " Key mappings
 map<C-e> :NERDTreeToggle<CR>
+
 
 
 

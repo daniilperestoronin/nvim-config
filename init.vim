@@ -14,23 +14,24 @@ Plug 'thaerkh/vim-workspace'
 
 "Colorschemes
 Plug 'arcticicestudio/nord-vim'
-Plug 'ayu-theme/ayu-vim'
 Plug 'mhartington/oceanic-next'
+Plug 'sonph/onehalf' , {'rtp': 'vim/'}
+
 
 " Language support
 " GO
 Plug 'fatih/vim-go', { 'tag': '*' }
 Plug 'nsf/gocode', { 'tag': 'v.20150303', 'rtp': 'vim' }
-" Vue
+" Vue:
 Plug 'posva/vim-vue'
 
 " Initialize plugin system
 call plug#end()
 
 " Settings
-colorscheme OceanicNext
+colorscheme onehalfdark
 
-set colorcolumn=80
+set colorcolumn=81
 
 set nowrap
 set number
@@ -55,9 +56,3 @@ nnoremap <leader>s :ToggleWorkspace<CR>
 
 " Key mappings
 map<C-e> :NERDTreeToggle<CR>
-
-
-
-
-
-

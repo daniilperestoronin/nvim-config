@@ -10,6 +10,7 @@ Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'dkprice/vim-easygrep'
+Plug 'thaerkh/vim-workspace'
 
 "Colorschemes
 Plug 'arcticicestudio/nord-vim'
@@ -48,9 +49,12 @@ syntax on
 "tab display only file name
 let g:airline#extensions#tabline#fnamemod = ':t'
 
+" vim-workspace settings
+nnoremap <leader>s :ToggleWorkspace<CR>
+"let g:workspace_session_disable_on_args = 1
+
 " Key mappings
 map<C-e> :NERDTreeToggle<CR>
-
 
 
 

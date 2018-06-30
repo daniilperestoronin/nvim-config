@@ -11,6 +11,9 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'dkprice/vim-easygrep'
 Plug 'thaerkh/vim-workspace'
+"Linting
+Plug 'w0rp/ale'
+
 
 "Colorschemes
 Plug 'arcticicestudio/nord-vim'
@@ -42,7 +45,7 @@ filetype plugin indent on
 set tabstop=4
 set shiftwidth=4
 set expandtab
-set listchars=eol:¬,tab:··,space:·
+set listchars=eol:↵,tab:ˑˑ,space:ˑ
 set list
 
 syntax on

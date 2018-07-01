@@ -10,9 +10,11 @@ Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'dkprice/vim-easygrep'
-Plug 'thaerkh/vim-workspace'
+"Plug 'thaerkh/vim-workspace'
 "Linting
-Plug 'w0rp/ale'
+"Plug 'w0rp/ale'
+"Tagbar
+Plug 'majutsushi/tagbar'
 
 
 "Colorschemes
@@ -22,7 +24,7 @@ Plug 'sonph/onehalf' , {'rtp': 'vim/'}
 
 
 " Language support
-" GO
+" GO   
 Plug 'fatih/vim-go', { 'tag': '*' }
 Plug 'nsf/gocode', { 'tag': 'v.20150303', 'rtp': 'vim' }
 " Vue:
@@ -59,3 +61,4 @@ nnoremap <leader>s :ToggleWorkspace<CR>
 
 " Key mappings
 map<C-e> :NERDTreeToggle<CR>
+

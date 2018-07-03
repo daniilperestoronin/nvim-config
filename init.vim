@@ -61,4 +61,5 @@ nnoremap <leader>s :ToggleWorkspace<CR>
 
 " Key mappings
 map<C-e> :NERDTreeToggle<CR>
+map <leader>t :TagbarToggle<CR>
 

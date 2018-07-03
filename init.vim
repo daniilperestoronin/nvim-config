@@ -27,13 +27,15 @@ Plug 'sonph/onehalf' , {'rtp': 'vim/'}
 " GO   
 Plug 'fatih/vim-go', { 'tag': '*' }
 Plug 'nsf/gocode', { 'tag': 'v.20150303', 'rtp': 'vim' }
+"Python
+Plug 'python-mode/python-mode'
 " Vue:
 Plug 'posva/vim-vue'
 
 " Initialize plugin system
 call plug#end()
 
-" Settings
+" SETTINGS
 colorscheme onehalfdark
 
 set colorcolumn=81
@@ -55,10 +57,14 @@ syntax on
 "tab display only file name
 let g:airline#extensions#tabline#fnamemod = ':t'
 
+"Plugins settings
+"python-mode
+let g:pymode_python = 'python3'
+
 " vim-workspace settings
 nnoremap <leader>s :ToggleWorkspace<CR>
-"let g:workspace_session_disable_on_args = 1
 
 " Key mappings
 map<C-e> :NERDTreeToggle<CR>
+
 

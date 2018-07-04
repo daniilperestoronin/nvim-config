@@ -1,25 +1,29 @@
-﻿" Specify a directory for plugins
-" - For Neovim: ~/.local/share/nvim/plugged
-" - Avoid using standard Vim directory names like 'plugin'
-
-"
-" ------------PLUGINS
-"
-call plug#begin('~/.local/share/nvim/plugged')
-
-" ------ TOOLS
-" nerdtree
+﻿" Specify a directory for plugins                                                                                                                                                   
+" - For Neovim: ~/.local/share/nvim/plugged                                                                                                                                         
+" - Avoid using standard Vim directory names like 'plugin'                                                                                                                          
+                                                                                                                                                                                    
+"                                                                                                                                                                                   
+" ------------PLUGINS                                                                                                                                                               
+"                                                                                                                                                                                   
+call plug#begin('~/.local/share/nvim/plugged')                                                                                                                                      
+                                                                                                                                                                                    
+" ------ TOOLS                                                                                                                                                                      
+                                                                                                                                                                                    
+" Better file browser                                                                                                                                                               
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+
 " vim-airline
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+
 Plug 'dkprice/vim-easygrep'
-"Plug 'thaerkh/vim-workspace'
-"Linting
-"Plug 'w0rp/ale'
-"Tagbar
+
+" Class/module browser
 Plug 'majutsushi/tagbar'
 
+" Code and files fuzzy finder
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 
 " ------ Colorschemes
 Plug 'arcticicestudio/nord-vim'
@@ -69,12 +73,28 @@ colorscheme onehalfdark
 let g:airline#extensions#tabline#fnamemod = ':t'
 
 " ----- Plugins settings
+
+" fzf ------------------------------
+
+" file finder mapping
+nmap ,e :Files<CR>
+" tags (symbols) in current file finder mapping
+nmap ,g :BTag<CR>
+" tags (symbols) in all files finder mapping
+nmap ,G :Tag<CR>
+" general code finder in current file mapping
+nmap ,f :BLines<CR>
+" general code finder in all files mapping
+nmap ,F :Lines<CR>
+" commands finder mapping
+nmap ,c :Commands<CR>
+
 "python-mode
 let g:pymode_python = 'python3'
 
 " vim-workspace settings
-nnoremap <leader>s :ToggleWorkspace<CR>
 
 " Key mappings
+map <leader>s :ToggleWorkspace<CR>
 map<C-e> :NERDTreeToggle<CR>
 map <leader>t :TagbarToggle<CR>

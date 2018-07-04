@@ -1,9 +1,13 @@
 ﻿" Specify a directory for plugins
 " - For Neovim: ~/.local/share/nvim/plugged
 " - Avoid using standard Vim directory names like 'plugin'
+
+"
+" ------------PLUGINS
+"
 call plug#begin('~/.local/share/nvim/plugged')
 
-" Tools
+" ------ TOOLS
 " nerdtree
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 " vim-airline
@@ -17,27 +21,31 @@ Plug 'dkprice/vim-easygrep'
 Plug 'majutsushi/tagbar'
 
 
-"Colorschemes
+" ------ Colorschemes
 Plug 'arcticicestudio/nord-vim'
 Plug 'mhartington/oceanic-next'
 Plug 'sonph/onehalf' , {'rtp': 'vim/'}
 
 
-" Language support
-" GO   
+" ------ Language support
+" --- GO   
 Plug 'fatih/vim-go', { 'tag': '*' }
 Plug 'nsf/gocode', { 'tag': 'v.20150303', 'rtp': 'vim' }
-"Python
-Plug 'python-mode/python-mode'
-" Vue:
+
+" --- Python
+Plug 'python-mode/python-mode', { 'branch': 'develop' }
+
+" ---  Vue:
 Plug 'posva/vim-vue'
 
 " Initialize plugin system
 call plug#end()
 
-" SETTINGS
-colorscheme onehalfdark
+"
+" ------------ SETTINGS
+"
 
+" ----- VIM settings
 set colorcolumn=81
 
 set nowrap
@@ -54,10 +62,13 @@ set list
 
 syntax on
 
+set encoding=utf-8
+colorscheme onehalfdark
+
 "tab display only file name
 let g:airline#extensions#tabline#fnamemod = ':t'
 
-"Plugins settings
+" ----- Plugins settings
 "python-mode
 let g:pymode_python = 'python3'
 
@@ -67,5 +78,3 @@ nnoremap <leader>s :ToggleWorkspace<CR>
 " Key mappings
 map<C-e> :NERDTreeToggle<CR>
 map <leader>t :TagbarToggle<CR>
-
-

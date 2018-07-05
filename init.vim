@@ -33,8 +33,7 @@ Plug 'sonph/onehalf' , {'rtp': 'vim/'}
 
 " ------ Language support
 " --- GO   
-Plug 'fatih/vim-go', { 'tag': '*' }
-Plug 'nsf/gocode', { 'tag': 'v.20150303', 'rtp': 'vim' }
+Plug 'fatih/vim-go', { 'tag': 'v1.17' }
 
 " --- Python
 Plug 'python-mode/python-mode', { 'branch': 'develop' }
@@ -64,9 +63,11 @@ set expandtab
 set listchars=eol:↵,tab:ˑˑ,space:ˑ
 set list
 
-syntax on
-
 set encoding=utf-8
+
+syntax on
+filetype plugin on
+
 colorscheme onehalfdark
 
 "tab display only file name
@@ -89,8 +90,13 @@ nmap ,F :Lines<CR>
 " commands finder mapping
 nmap ,c :Commands<CR>
 
+" vim-go
+let g:go_gocode_autobuild = 1
+
 "python-mode
 let g:pymode_python = 'python3'
+
+
 
 " vim-workspace settings
 

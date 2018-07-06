@@ -1,39 +1,42 @@
-﻿" Specify a directory for plugins                                                                                                                                                   
-" - For Neovim: ~/.local/share/nvim/plugged                                                                                                                                         
-" - Avoid using standard Vim directory names like 'plugin'                                                                                                                          
-                                                                                                                                                                                    
-"                                                                                                                                                                                   
-" ------------PLUGINS                                                                                                                                                               
-"                                                                                                                                                                                   
-call plug#begin('~/.local/share/nvim/plugged')                                                                                                                                      
-                                                                                                                                                                                    
-" ------ TOOLS                                                                                                                                                                      
-                                                                                                                                                                                    
-" Better file browser                                                                                                                                                               
+﻿" Specify a directory for plugins
+" - For Neovim: ~/.local/share/nvim/plugged
+" - Avoid using standard Vim directory names like 'plugin'
+
+"-------------------------------------------------------------------------------
+"                                  PLUGINS
+"-------------------------------------------------------------------------------
+call plug#begin('~/.local/share/nvim/plugged')
+
+"---------------------------------
+"           TOOLS
+"---------------------------------
+
+" --- Better file browser
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 
-" vim-airline
+" --- vim-airline
 Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 
-Plug 'dkprice/vim-easygrep'
-
-" Class/module browser
+" --- Class/module browser
 Plug 'majutsushi/tagbar'
 
-" Code and files fuzzy finder
+" --- Code and files fuzzy finder
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
-" ------ Colorschemes
+Plug 'dkprice/vim-easygrep'
+
+" --- Colorschemes
 Plug 'arcticicestudio/nord-vim'
 Plug 'mhartington/oceanic-next'
 Plug 'sonph/onehalf' , {'rtp': 'vim/'}
 
 
-" ------ Language support
+"---------------------------------
+"			LANGUAGE SUPPORT 
+"---------------------------------
 " --- GO   
-Plug 'fatih/vim-go', { 'tag': 'v1.17' }
+Plug 'fatih/vim-go', { 'tag': 'v1.17', 'for': ['go'] }
 
 " --- Python
 Plug 'python-mode/python-mode', { 'branch': 'develop' }
@@ -44,11 +47,13 @@ Plug 'posva/vim-vue'
 " Initialize plugin system
 call plug#end()
 
-"
-" ------------ SETTINGS
-"
+"-------------------------------------------------------------------------------
+"           					 SETTINGS
+"-------------------------------------------------------------------------------
 
+"---------------------------------
 " ----- VIM settings
+"---------------------------------
 set colorcolumn=81
 
 set nowrap
@@ -73,10 +78,11 @@ colorscheme onehalfdark
 "tab display only file name
 let g:airline#extensions#tabline#fnamemod = ':t'
 
-" ----- Plugins settings
+"---------------------------------
+"       Plugins settings
+"---------------------------------
 
-" fzf ------------------------------
-
+" --- fzf
 " file finder mapping
 nmap ,e :Files<CR>
 " tags (symbols) in current file finder mapping
@@ -90,17 +96,13 @@ nmap ,F :Lines<CR>
 " commands finder mapping
 nmap ,c :Commands<CR>
 
-" vim-go
+" --- vim-go
 let g:go_gocode_autobuild = 1
 
-"python-mode
+" --- python-mode
 let g:pymode_python = 'python3'
 
-
-
-" vim-workspace settings
-
-" Key mappings
+" --- Key mappings
 map <leader>s :ToggleWorkspace<CR>
 map<C-e> :NERDTreeToggle<CR>
 map <leader>t :TagbarToggle<CR>

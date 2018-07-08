@@ -1,30 +1,33 @@
-﻿" Specify a directory for plugins
-" - For Neovim: ~/.local/share/nvim/plugged
-" - Avoid using standard Vim directory names like 'plugin'
-
-"-------------------------------------------------------------------------------
-"                                  PLUGINS
-"-------------------------------------------------------------------------------
-call plug#begin('~/.local/share/nvim/plugged')
-
-"---------------------------------
-"           TOOLS
-"---------------------------------
-
-" --- Better file browser
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-
-" --- vim-airline
-Plug 'vim-airline/vim-airline'
-
-" --- Class/module browser
-Plug 'majutsushi/tagbar'
-
+﻿" Specify a directory for plugins                                                                                                                                                               
+" - For Neovim: ~/.local/share/nvim/plugged                                                                                                                                                     
+" - Avoid using standard Vim directory names like 'plugin'                                                                                                                          
+                                                                                                                                                                                    
+"-------------------------------------------------------------------------------                                                                                                    
+"                                  PLUGINS                                                                                                                                          
+"-------------------------------------------------------------------------------                                                                                                    
+call plug#begin('~/.local/share/nvim/plugged')                                                                                                                                      
+                                                                                                                                                                                    
+"---------------------------------                                                                                                                                                  
+"              TOOLS                                                                                                                                                                
+"---------------------------------                                                                                                                                                  
+                                                                                                                                                                                    
+" --- Better file browser                                                                                                                                                           
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }                                                                                                                             
+                                                                                                                                                                                    
+" --- vim-airline                                                                                                                                                                   
+Plug 'vim-airline/vim-airline'                                                                                                                                                      
+                                                                                                                                                                                    
+" --- Class/module browser                                                                                                                                                          
+Plug 'majutsushi/tagbar'                                                                                                                                                            
+                                                                                                                                                                                    
 " --- Code and files fuzzy finder
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
 Plug 'dkprice/vim-easygrep'
+
+" --- Code completion 
+Plug 'Shougo/deoplete.nvim', {'tag': '4.0-serial', 'do': ':UpdateRemotePlugins' }
 
 " --- Colorschemes
 Plug 'arcticicestudio/nord-vim'
@@ -33,7 +36,7 @@ Plug 'sonph/onehalf' , {'rtp': 'vim/'}
 
 
 "---------------------------------
-"			LANGUAGE SUPPORT 
+"        LANGUAGE SUPPORT 
 "---------------------------------
 " --- GO   
 Plug 'fatih/vim-go', { 'tag': 'v1.17', 'for': ['go'] }
@@ -48,11 +51,11 @@ Plug 'posva/vim-vue'
 call plug#end()
 
 "-------------------------------------------------------------------------------
-"           					 SETTINGS
+"                                    SETTINGS
 "-------------------------------------------------------------------------------
 
 "---------------------------------
-" ----- VIM settings
+"           VIM settings
 "---------------------------------
 set colorcolumn=81
 
@@ -79,7 +82,7 @@ colorscheme onehalfdark
 let g:airline#extensions#tabline#fnamemod = ':t'
 
 "---------------------------------
-"       Plugins settings
+"        Plugins settings
 "---------------------------------
 
 " --- fzf
@@ -95,6 +98,9 @@ nmap ,f :BLines<CR>
 nmap ,F :Lines<CR>
 " commands finder mapping
 nmap ,c :Commands<CR>
+
+" --- deoplete.nvim
+let g:deoplete#enable_at_startup = 1
 
 " --- vim-go
 let g:go_gocode_autobuild = 1

@@ -1,25 +1,25 @@
-﻿" Specify a directory for plugins                                                                                                                                                               
-" - For Neovim: ~/.local/share/nvim/plugged                                                                                                                                                     
-" - Avoid using standard Vim directory names like 'plugin'                                                                                                                          
-  
-"-------------------------------------------------------------------------------                                                                                                    
-"                                  PLUGINS                                                                                                                                          
-"-------------------------------------------------------------------------------                                                                                                    
-call plug#begin('~/.local/share/nvim/plugged')                                                                                                                                      
+﻿" Specify a directory for plugins
+" - For Neovim: ~/.local/share/nvim/plugged
+" - Avoid using standard Vim directory names like 'plugin'
 
-"---------------------------------                                                                                                                                                  
-"              TOOLS                                                                                                                                                                
-"---------------------------------                                                                                                                                                  
+"-------------------------------------------------------------------------------
+"                                  PLUGINS
+"-------------------------------------------------------------------------------
+call plug#begin('~/.local/share/nvim/plugged')
 
-" --- Better file browser                                                                                                                                                           
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }                                                                                                                             
- 
-" --- vim-airline                                                                                                                                                                   
-Plug 'vim-airline/vim-airline'                                                                                                                                                      
-  
-" --- Class/module browser                                                                                                                                                          
-Plug 'majutsushi/tagbar'                                                                                                                                                            
-  
+"---------------------------------
+"              TOOLS
+"---------------------------------
+
+" --- Better file browser
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+
+" --- vim-airline
+Plug 'vim-airline/vim-airline'
+
+" --- Class/module browser
+Plug 'majutsushi/tagbar'
+
 " --- Code and files fuzzy finder
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'

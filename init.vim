@@ -30,10 +30,10 @@ Plug 'dkprice/vim-easygrep'
 Plug 'Shougo/deoplete.nvim', {'tag': '4.0-serial', 'do': ':UpdateRemotePlugins' }
 
 " --- Colorschemes
+Plug 'morhetz/gruvbox'
 Plug 'arcticicestudio/nord-vim'
 Plug 'mhartington/oceanic-next'
 Plug 'sonph/onehalf' , {'rtp': 'vim/'}
-
 
 "---------------------------------
 "        LANGUAGE SUPPORT 
@@ -76,7 +76,10 @@ set encoding=utf-8
 syntax on
 filetype plugin on
 
-colorscheme onehalfdark
+colorscheme gruvbox
+set background=dark
+let g:gruvbox_termcolors = '16'
+let g:gruvbox_contrast = 'soft'
 
 "tab display only file name
 let g:airline#extensions#tabline#fnamemod = ':t'

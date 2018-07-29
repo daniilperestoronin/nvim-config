@@ -30,34 +30,34 @@ Plug 'dkprice/vim-easygrep'
 Plug 'Shougo/deoplete.nvim', {'tag': '4.0-serial', 'do': ':UpdateRemotePlugins' }
 
 " --- Colorschemes
-Plug 'morhetz/gruvbox'
-Plug 'arcticicestudio/nord-vim'
-Plug 'mhartington/oceanic-next'
-Plug 'sonph/onehalf' , {'rtp': 'vim/'}
-
-"---------------------------------
-"        LANGUAGE SUPPORT 
-"---------------------------------
-" --- GO   
-Plug 'fatih/vim-go', { 'tag': 'v1.17', 'for': ['go'] }
-
-" --- Python
-Plug 'python-mode/python-mode', { 'branch': 'develop' }
-
-" ---  Vue:
-Plug 'posva/vim-vue'
-
-" Initialize plugin system
-call plug#end()
-
-"-------------------------------------------------------------------------------
-"                                    SETTINGS
-"-------------------------------------------------------------------------------
-
-"---------------------------------
-"           VIM settings
-"---------------------------------
-set colorcolumn=81
+Plug 'morhetz/gruvbox'                                                                         
+Plug 'arcticicestudio/nord-vim'                                                                
+Plug 'mhartington/oceanic-next'                                                                
+Plug 'sonph/onehalf' , {'rtp': 'vim/'}                                                         
+                                                                                               
+"---------------------------------                                                             
+"        LANGUAGE SUPPORT                                                                                                                                                                       
+"---------------------------------                                                                                                                                                              
+" --- GO                                                                                                                                                                                                                                                                                                                                                                   
+Plug 'fatih/vim-go', { 'tag': 'v1.17', 'for': ['go'] }                                                                                                                                                                                                                                                                                                                     
+                                                                                                                                                                                                                                                                                                                                                                           
+" --- Python                                                                                                                                                                                                                                                                                                                                                               
+Plug 'python-mode/python-mode', { 'branch': 'develop' }                                                                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                                                                                                                           
+" ---  Vue:                                                                                                                                                                                                                                                                                                                                                                
+Plug 'posva/vim-vue'                                                                                                                                                                                                                                                                                                                                                       
+                                                                                                                                                                                                                                                                                                                                                                           
+" Initialize plugin system                                                                                                                                                                                                                                                                                                                                                 
+call plug#end()                                                                                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                                                                                                           
+"-------------------------------------------------------------------------------                                                                                                                                                                                                                                                                                           
+"                                    SETTINGS                                                                                                                                                                                                                                                                                                                              
+"-------------------------------------------------------------------------------                                                                                                                                                                                                                                                                                           
+                                                                                                                                                                                                                                                                                                                                                                           
+"---------------------------------                                                                                                                                                                                                                                                                                                                                         
+"           VIM settings                                                                                                                                                                                                                                                                                                                                                   
+"---------------------------------                                                                                                                                                                                                                                                                                                                                         
+set colorcolumn=81                                                                                                                                                                                                                                                                                                                                                         
 
 set nowrap
 set number
@@ -76,10 +76,12 @@ set encoding=utf-8
 syntax on
 filetype plugin on
 
-colorscheme gruvbox
+set fillchars+=vert:\ 
 set background=dark
-let g:gruvbox_termcolors = '16'
-let g:gruvbox_contrast = 'soft'
+let g:gruvbox_vert_split = 'bg2'
+let g:gruvbox_number_column = 'bg1'
+
+colorscheme gruvbox
 
 "tab display only file name
 let g:airline#extensions#tabline#fnamemod = ':t'

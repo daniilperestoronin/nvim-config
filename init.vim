@@ -30,34 +30,34 @@ Plug 'dkprice/vim-easygrep'
 Plug 'Shougo/deoplete.nvim', {'tag': '4.0-serial', 'do': ':UpdateRemotePlugins' }
 
 " --- Colorschemes
-Plug 'morhetz/gruvbox'                                                                         
-Plug 'arcticicestudio/nord-vim'                                                                
-Plug 'mhartington/oceanic-next'                                                                
-Plug 'sonph/onehalf' , {'rtp': 'vim/'}                                                         
-                                                                                               
-"---------------------------------                                                             
-"        LANGUAGE SUPPORT                                                                                                                                                                       
-"---------------------------------                                                                                                                                                              
-" --- GO                                                                                                                                                                                                                                                                                                                                                                   
-Plug 'fatih/vim-go', { 'tag': 'v1.17', 'for': ['go'] }                                                                                                                                                                                                                                                                                                                     
-                                                                                                                                                                                                                                                                                                                                                                           
-" --- Python                                                                                                                                                                                                                                                                                                                                                               
-Plug 'python-mode/python-mode', { 'branch': 'develop' }                                                                                                                                                                                                                                                                                                                    
-                                                                                                                                                                                                                                                                                                                                                                           
-" ---  Vue:                                                                                                                                                                                                                                                                                                                                                                
-Plug 'posva/vim-vue'                                                                                                                                                                                                                                                                                                                                                       
-                                                                                                                                                                                                                                                                                                                                                                           
-" Initialize plugin system                                                                                                                                                                                                                                                                                                                                                 
-call plug#end()                                                                                                                                                                                                                                                                                                                                                            
-                                                                                                                                                                                                                                                                                                                                                                           
-"-------------------------------------------------------------------------------                                                                                                                                                                                                                                                                                           
-"                                    SETTINGS                                                                                                                                                                                                                                                                                                                              
-"-------------------------------------------------------------------------------                                                                                                                                                                                                                                                                                           
-                                                                                                                                                                                                                                                                                                                                                                           
-"---------------------------------                                                                                                                                                                                                                                                                                                                                         
-"           VIM settings                                                                                                                                                                                                                                                                                                                                                   
-"---------------------------------                                                                                                                                                                                                                                                                                                                                         
-set colorcolumn=81                                                                                                                                                                                                                                                                                                                                                         
+Plug 'morhetz/gruvbox'
+Plug 'arcticicestudio/nord-vim'
+Plug 'mhartington/oceanic-next'
+Plug 'sonph/onehalf' , {'rtp': 'vim/'}
+
+"---------------------------------
+"        LANGUAGE SUPPORT
+"---------------------------------
+" --- GO
+Plug 'fatih/vim-go', { 'tag': 'v1.17', 'for': ['go'] }
+
+" --- Python
+Plug 'python-mode/python-mode', { 'branch': 'develop' }
+
+" ---  Vue:
+Plug 'posva/vim-vue'
+
+" Initialize plugin system
+call plug#end()
+
+"-------------------------------------------------------------------------------
+"                                    SETTINGS
+"-------------------------------------------------------------------------------
+
+"---------------------------------
+"           VIM settings
+"---------------------------------
+set colorcolumn=81
 
 set nowrap
 set number

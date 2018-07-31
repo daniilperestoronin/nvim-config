@@ -13,12 +13,13 @@ call plug#begin('~/.local/share/nvim/plugged')
 
 " --- Better file browser
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'Xuyuanp/nerdtree-git-plugin', { 'on':  'NERDTreeToggle' }
 
 " --- vim-airline
 Plug 'vim-airline/vim-airline'
 
 " --- Class/module browser
-Plug 'majutsushi/tagbar'
+Plug 'majutsushi/tagbar', { 'on': 'TagbarToggle' }
 
 " --- Code and files fuzzy finder
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -28,6 +29,10 @@ Plug 'dkprice/vim-easygrep'
 
 " --- Code completion 
 Plug 'Shougo/deoplete.nvim', {'tag': '4.0-serial', 'do': ':UpdateRemotePlugins' }
+
+" --- Git integration
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
 
 " --- Colorschemes
 Plug 'morhetz/gruvbox'

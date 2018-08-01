@@ -50,7 +50,7 @@ Plug 'fatih/vim-go', { 'tag': 'v1.17', 'for': ['go'] }
 Plug 'python-mode/python-mode', { 'branch': 'develop' }
 
 " ---  Vue:
-Plug 'posva/vim-vue'
+" Plug 'posva/vim-vue'
 
 " Initialize plugin system
 call plug#end()
@@ -90,6 +90,9 @@ colorscheme gruvbox
 
 "tab display only file name
 let g:airline#extensions#tabline#fnamemod = ':t'
+
+" syntax highlighting
+autocmd BufRead,BufNewFile *.vue setlocal filetype=javascript
 
 "---------------------------------
 "        Plugins settings

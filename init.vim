@@ -43,6 +43,10 @@ Plug 'sonph/onehalf' , {'rtp': 'vim/'}
 "---------------------------------
 "        LANGUAGE SUPPORT
 "---------------------------------
+
+" --- Javascript
+Plug 'pangloss/vim-javascript'
+
 " --- GO
 Plug 'fatih/vim-go', { 'tag': 'v1.17', 'for': ['go'] }
 

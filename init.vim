@@ -48,7 +48,7 @@ Plug 'sonph/onehalf' , {'rtp': 'vim/'}
 Plug 'pangloss/vim-javascript'
 
 " --- GO
-Plug 'fatih/vim-go', { 'tag': 'v1.17', 'for': ['go'] }
+Plug 'fatih/vim-go', { 'for': ['go'] }
 
 " --- Python
 Plug 'python-mode/python-mode', { 'branch': 'develop' }

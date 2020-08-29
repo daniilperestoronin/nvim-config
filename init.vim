@@ -68,6 +68,8 @@ call plug#end()
 "---------------------------------
 set colorcolumn=81
 
+set relativenumber
+
 set nowrap
 set number
 set hlsearch
@@ -77,7 +79,7 @@ filetype plugin indent on
 set tabstop=4
 set shiftwidth=4
 set expandtab
-set listchars=eol:↵,tab:ˑˑ,space:ˑ
+set listchars=eol:→,tab:..,space:.
 set list
 
 set encoding=utf-8

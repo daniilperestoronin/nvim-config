@@ -66,7 +66,7 @@ call plug#end()
 "---------------------------------
 "           VIM settings
 "---------------------------------
-set colorcolumn=81
+set colorcolumn=121
 
 set relativenumber
 

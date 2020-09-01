@@ -37,8 +37,6 @@ Plug 'airblade/vim-gitgutter'
 " --- Colorschemes
 Plug 'morhetz/gruvbox'
 Plug 'arcticicestudio/nord-vim'
-Plug 'mhartington/oceanic-next'
-Plug 'sonph/onehalf' , {'rtp': 'vim/'}
 
 "---------------------------------
 "        LANGUAGE SUPPORT
@@ -79,7 +77,7 @@ filetype plugin indent on
 set tabstop=4
 set shiftwidth=4
 set expandtab
-set listchars=eol:→,tab:..,space:.
+set listchars=eol:→,tab:>.,space:.
 set list
 
 set encoding=utf-8

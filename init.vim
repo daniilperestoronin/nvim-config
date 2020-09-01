@@ -2,6 +2,17 @@
 " - For Neovim: ~/.local/share/nvim/plugged
 " - Avoid using standard Vim directory names like 'plugin'
 
+" --- Functions
+function! BuildYCM(info)  
+  " info is a dictionary with 3 fields  
+  " - name:   name of the plugin  
+  " - status: 'installed', 'updated', or 'unchanged'  
+  " - force:  set on PlugInstall! or PlugUpdate!  
+  if a:info.status == 'installed' || a:info.force  
+    !./install.py  
+  endif  
+endfunction 
+
 "-------------------------------------------------------------------------------
 "                                  PLUGINS
 "-------------------------------------------------------------------------------
@@ -28,7 +39,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'dkprice/vim-easygrep'
 
 " --- Code completion 
-Plug 'Shougo/deoplete.nvim', {'tag': '4.0-serial', 'do': ':UpdateRemotePlugins' }
+Plug 'ycm-core/YouCompleteMe', { 'do': function('BuildYCM') }
 
 " --- Git integration
 Plug 'tpope/vim-fugitive'
@@ -129,3 +140,4 @@ let g:pymode_python = 'python3'
 map <leader>s :ToggleWorkspace<CR>
 map<C-e> :NERDTreeToggle<CR>
 map <leader>t :TagbarToggle<CR>
+

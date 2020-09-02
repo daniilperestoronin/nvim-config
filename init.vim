@@ -63,7 +63,10 @@ Plug 'fatih/vim-go', { 'for': ['go'] }
 Plug 'python-mode/python-mode', { 'branch': 'develop' }
 
 " ---  Vue:
-" Plug 'posva/vim-vue'
+Plug 'posva/vim-vue'
+
+" --- Tex
+Plug 'lervag/vimtex'
 
 " Initialize plugin system
 call plug#end()
@@ -140,4 +143,8 @@ let g:pymode_python = 'python3'
 map <leader>s :ToggleWorkspace<CR>
 map<C-e> :NERDTreeToggle<CR>
 map <leader>t :TagbarToggle<CR>
+
+" --- Tex
+let g:tex_flavor = 'latex'
+let g:vimtex_view_method = 'zathura'
 

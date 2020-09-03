@@ -39,7 +39,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'dkprice/vim-easygrep'
 
 " --- Code completion 
-Plug 'ycm-core/YouCompleteMe', { 'do': function('BuildYCM') }
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " --- Git integration
 Plug 'tpope/vim-fugitive'
@@ -146,5 +146,5 @@ map <leader>t :TagbarToggle<CR>
 
 " --- Tex
 let g:tex_flavor = 'latex'
-let g:vimtex_view_method = 'zathura'
+let g:vimtex_view_general_viewer = 'zathura'
 

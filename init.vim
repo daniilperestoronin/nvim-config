@@ -119,6 +119,11 @@ let g:deoplete#enable_at_startup = 1
 
 " --- vim-go
 let g:go_gocode_autobuild = 1
+let g:go_highlight_structs = 1 
+let g:go_highlight_methods = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
 
 " --- python-mode
 let g:pymode_python = 'python3'

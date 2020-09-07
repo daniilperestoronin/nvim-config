@@ -2,6 +2,33 @@
 " - For Neovim: ~/.local/share/nvim/plugged
 " - Avoid using standard Vim directory names like 'plugin'
 
+"---------------------------------
+"           VIM settings
+"---------------------------------
+set colorcolumn=121
+
+set relativenumber
+
+set nowrap
+set number
+set hlsearch
+set incsearch
+
+filetype plugin indent on
+set tabstop=4
+set shiftwidth=4
+set expandtab
+set listchars=eol:→,tab:>.,space:.
+set list
+
+set encoding=utf-8
+
+syntax on
+filetype plugin on
+
+set fillchars+=vert:\ 
+set background=dark
+
 "-------------------------------------------------------------------------------
 "                                  PLUGINS
 "-------------------------------------------------------------------------------
@@ -60,36 +87,11 @@ Plug 'lervag/vimtex'
 " Initialize plugin system
 call plug#end()
 
-"-------------------------------------------------------------------------------
-"                                    SETTINGS
-"-------------------------------------------------------------------------------
-
 "---------------------------------
-"           VIM settings
+"        Plugins settings
 "---------------------------------
-set colorcolumn=121
 
-set relativenumber
-
-set nowrap
-set number
-set hlsearch
-set incsearch
-
-filetype plugin indent on
-set tabstop=4
-set shiftwidth=4
-set expandtab
-set listchars=eol:→,tab:>.,space:.
-set list
-
-set encoding=utf-8
-
-syntax on
-filetype plugin on
-
-set fillchars+=vert:\ 
-set background=dark
+" --- colorscheme
 let g:gruvbox_vert_split = 'bg2'
 let g:gruvbox_number_column = 'bg1'
 
@@ -97,13 +99,6 @@ colorscheme gruvbox
 
 "tab display only file name
 let g:airline#extensions#tabline#fnamemod = ':t'
-
-" syntax highlighting
-autocmd BufRead,BufNewFile *.vue setlocal filetype=javascript
-
-"---------------------------------
-"        Plugins settings
-"---------------------------------
 
 " --- fzf
 " file finder mapping

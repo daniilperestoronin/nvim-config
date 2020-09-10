@@ -32,7 +32,22 @@ set background=dark
 "-------------------------------------------------------------------------------
 "                                  PLUGINS
 "-------------------------------------------------------------------------------
+
+" Plugin setup preparation
+
+let autoload_plug_path = stdpath('data') . '/site/autoload/plug.vim'
+if !filereadable(autoload_plug_path)
+      silent execute '!curl -fLo ' . autoload_plug_path . '  --create-dirs 
+            \ "https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim"'
+      autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+unlet autoload_plug_path
+
 call plug#begin('~/.local/share/nvim/plugged')
+
+if !empty(filter(copy(g:plugs), '!isdirectory(v:val.dir)'))
+    autocmd VimEnter * PlugInstall | q
+endif
 
 "---------------------------------
 "              TOOLS
@@ -86,6 +101,9 @@ Plug 'lervag/vimtex'
 
 " Initialize plugin system
 call plug#end()
+
+" Install Plugins
+delc PlugUpgrade
 
 "---------------------------------
 "        Plugins settings

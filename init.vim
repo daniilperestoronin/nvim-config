@@ -18,7 +18,7 @@ filetype plugin indent on
 set tabstop=4
 set shiftwidth=4
 set expandtab
-set listchars=eol:→,tab:>.,space:.
+"set listchars=tab:>.,space:.
 set list
 
 set encoding=utf-8
@@ -112,8 +112,9 @@ let g:gruvbox_number_column = 'bg1'
 
 colorscheme gruvbox
 
-"tab display only file name
+" --- vim-airline
 let g:airline#extensions#tabline#fnamemod = ':t'
+let g:airline_powerline_fonts = 1
 
 " --- fzf
 " file finder mapping

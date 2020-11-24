@@ -18,8 +18,6 @@ filetype plugin indent on
 set tabstop=4
 set shiftwidth=4
 set expandtab
-"set listchars=tab:>.,space:.
-set list
 
 set encoding=utf-8
 
@@ -114,7 +112,7 @@ delc PlugUpgrade
 let g:gruvbox_vert_split = 'bg2'
 let g:gruvbox_number_column = 'bg1'
 
-colorscheme gruvbox
+colorscheme nord 
 
 " --- vim-airline
 let g:airline#extensions#tabline#fnamemod = ':t'
@@ -152,7 +150,7 @@ let g:pymode_python = 'python3'
 
 " --- Key mappings
 map <leader>s :ToggleWorkspace<CR>
-map<C-e> :NERDTreeToggle<CR>
+map ff :NERDTreeToggle<CR>
 map <leader>t :TagbarToggle<CR>
 
 " --- Tex
